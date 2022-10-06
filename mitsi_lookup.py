@@ -96,7 +96,7 @@ ROOM_TEMP = LookupDict(
 )
 
 MODE = LookupDict(
-    {"HEAT": 0x01, "DRY": 0x02, "COOL": 0x03, "FAN": 0x07, "AUTO": 0x08}, "MODE"
+    {"HEAT": 0x09, "DRY": 0x02, "COOL": 0x03, "FAN": 0x07, "AUTO": 0x08}, "MODE"
 )
 
 VANE = LookupDict(
