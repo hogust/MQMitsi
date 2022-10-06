@@ -120,7 +120,9 @@ class HeatPump(object):
     def loop(self):
         res = self.ser.read(22)
         for c in res:
-            val = ord(c)
+            #print(hex(c))
+            #val = ord(c)
+            val = c
             if val == 0xFC:
                 self.current_packet = Packet()
             if not self.current_packet:
