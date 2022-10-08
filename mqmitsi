@@ -105,6 +105,8 @@ if __name__ == "__main__":
         "--serial-port", default="/dev/ttyAMA0", help="Serial device to communicate on."
     )
     parser.add_argument("--log", help="Set log level.", default="WARNING")
+    parser.add_argument("--u", help="user", default=None)
+    parser.add_argument("--pwd",help="pwd",default=None)
     args = parser.parse_args()
 
     log = logging.getLogger()
@@ -120,5 +122,7 @@ if __name__ == "__main__":
         broker=args.mqtt_host,
         prefix=args.mqtt_prefix,
         broker_port=args.mqtt_port,
+        user=args.u,
+        password=args.pwd
     )
     h.run()
